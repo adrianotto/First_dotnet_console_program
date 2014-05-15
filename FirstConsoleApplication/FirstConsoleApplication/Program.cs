@@ -9,7 +9,21 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("This is my first program! Yay!");
+            Console.WriteLine("Enter your name");
+            string happydata = Console.ReadLine();
+            Console.WriteLine("Enter your age");
+            int Age = 0;
+            try
+            {
+                Age = Convert.ToInt16(Console.ReadLine());
+                Console.WriteLine("Hello there " + happydata + " your age is " + Age);
+                Console.ReadLine();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Age should be numeric");
+            }
+            
         }
     }
 }
